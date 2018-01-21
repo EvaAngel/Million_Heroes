@@ -18,8 +18,10 @@ public class Identify_Picture{
 		//File imgDir = new File("test_chinese_10.png");
 		long startTime = System.currentTimeMillis();
 		String ocrResult = instance.doOCR(imgDir);
-		// ���ʶ����
-		System.out.println("OCR Result: \n" + ocrResult + "\n 程序耗时：" + (System.currentTimeMillis() - startTime) + "ms");
-		return ocrResult;
+		//去除换行
+		String str=ocrResult.replace("\n","");
+		// 结果输出
+		System.out.println("OCR Result:\n" + str + "\n程序耗时：" + (System.currentTimeMillis() - startTime) + "ms");
+		return str;
 	}
 }

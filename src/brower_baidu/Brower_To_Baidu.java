@@ -12,7 +12,7 @@ public class Brower_To_Baidu {
         if(Desktop.isDesktopSupported()){
             try
             {
-                URI url =new URI("https://www.baidu.com/s?wd="+"江南四大才子");
+                URI url =new URI("https://www.baidu.com/s?wd="+str);
                 Desktop desktop=Desktop.getDesktop();
                 desktop.browse(url);
             }catch (URISyntaxException e)
