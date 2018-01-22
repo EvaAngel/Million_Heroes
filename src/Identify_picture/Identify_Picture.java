@@ -20,8 +20,9 @@ public class Identify_Picture{
 		String ocrResult = instance.doOCR(imgDir);
 		//去除换行
 		String str=ocrResult.replace("\n","");
+	    String str2=str.replace("\"","");
 		// 结果输出
-		System.out.println("OCR Result:\n" + str + "\n程序耗时：" + (System.currentTimeMillis() - startTime) + "ms");
-		return str;
+		System.out.println("OCR Result:\n" + str2 + "\n程序耗时：" + (System.currentTimeMillis() - startTime) + "ms");
+		return str2;
 	}
 }

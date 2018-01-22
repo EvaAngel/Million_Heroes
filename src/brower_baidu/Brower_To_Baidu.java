@@ -12,7 +12,8 @@ public class Brower_To_Baidu {
         if(Desktop.isDesktopSupported()){
             try
             {
-                URI url =new URI("https://www.baidu.com/s?wd="+str);
+               // URI url =new URI("https://www.baidu.com/s?wd="+str);
+                URI url =new URI("https://www.sogou.com/web?query="+str);
                 Desktop desktop=Desktop.getDesktop();
                 desktop.browse(url);
             }catch (URISyntaxException e)
